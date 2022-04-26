@@ -20,16 +20,15 @@ while True:
         dictionary = eval(packet)
 
         value = dictionary['start']
+        ms = dictionary['time']
         message = dictionary['after']
         
         print("value = ", value)
+        print("ms = ", ms)                  
         print("message = ", message, "\n")
         
         while value >= 0:
             print(value)
-            sleep(1000)
+            sleep(ms)                       
             value = value - 1
-            
-        print(message)
         
-        print()

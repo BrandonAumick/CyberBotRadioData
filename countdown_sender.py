@@ -12,10 +12,13 @@ print("micro:bit sender")
 while True:
     text = input("Enter countdown start: ")
     value = int(text)
+    text = input("Enter ms time between counts: ")         
+    ms = int(text)                                         
     message = input("Enter message after countdown: ")
     
     dictionary = {  }
     dictionary['start'] = value
+    dictionary['time'] = ms                                
     dictionary['after'] = message
 
     packet = str(dictionary)
